@@ -89,7 +89,8 @@ export class FileDownloader {
 
       const totalSize = parseInt(response.headers['content-length'] || '0', 10);
       let downloadedSize = 0;
-      
+      let lastLoggedProgress = -1; // Initialize with a value that will trigger the first log
+
       const writer = fs.createWriteStream(filepath);
       
       response.data.on('data', (chunk: Buffer) => {
@@ -97,9 +98,12 @@ export class FileDownloader {
         
         if (totalSize > 0) {
           const progress = Math.round((downloadedSize / totalSize) * 100);
-          process.stdout.write(
-            `\r${mapData.title}: ${progress}% (${this.formatBytes(downloadedSize)}/${this.formatBytes(totalSize)})`
-          );
+          if (progress >= lastLoggedProgress + 5 || progress === 100) { // Log every 5% or at 100%
+            process.stdout.write(
+              `\r${mapData.title}: ${progress}% (${this.formatBytes(downloadedSize)}/${this.formatBytes(totalSize)})`
+            );
+            lastLoggedProgress = progress;
+          }
         }
       });
 
