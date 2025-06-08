@@ -80,6 +80,7 @@ jobs:
         timeout 600 npm start scan # Run for 10 minutes
         
     - name: Check for cache changes
+      if: always() # Run even if previous steps fail
       id: cache-changes
       run: |
         if git diff --quiet output/rustmaps-cache.json; then
@@ -89,7 +90,7 @@ jobs:
         fi
         
     - name: Commit and push cache updates
-      if: steps.cache-changes.outputs.changed == 'true'
+      if: always() && steps.cache-changes.outputs.changed == 'true' # Run even if previous steps fail, but only if changes exist
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
