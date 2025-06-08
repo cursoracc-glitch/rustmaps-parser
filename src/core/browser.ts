@@ -17,7 +17,7 @@ export class BrowserManager {
       logger.info('Initializing browser...');
       
       this.browser = await puppeteer.launch({
-        headless: this.options.headless ? 'new' : false,
+        headless: this.options.headless, // 'new' is default for true now, or use 'shell' for old headless
         args: [
           '--no-sandbox',
           '--disable-setuid-sandbox',
@@ -86,7 +86,7 @@ export class BrowserManager {
       });
 
       // Wait for full load
-      await page.waitForTimeout(DELAYS.pageLoad);
+      await new Promise(resolve => setTimeout(resolve, DELAYS.pageLoad));
       
       logger.debug('Page loaded');
     } catch (error) {
@@ -127,7 +127,7 @@ export class BrowserManager {
     try {
       await this.waitForElement(page, selector);
       await page.click(selector);
-      await page.waitForTimeout(1000);
+      await new Promise(resolve => setTimeout(resolve, 1000));
       return true;
     } catch (error) {
       logger.debug(`Failed to click element ${selector}`);

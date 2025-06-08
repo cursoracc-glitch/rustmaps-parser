@@ -113,7 +113,7 @@ export class MapParser {
         timeout: 15000 
       });
       
-      await page.waitForTimeout(2000);
+      await new Promise(resolve => setTimeout(resolve, 2000)); // Replaced waitForTimeout
       
       // Extract detailed information
       const detailedInfo = await page.evaluate(() => {
@@ -219,7 +219,7 @@ export class MapParser {
         timeout: 15000 
       });
       
-      await page.waitForTimeout(2000);
+      await new Promise(resolve => setTimeout(resolve, 2000)); // Replaced waitForTimeout
       
       // Ищем ссылку для скачивания
       const downloadUrl = await page.evaluate(() => {
