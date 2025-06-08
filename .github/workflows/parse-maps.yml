@@ -70,8 +70,10 @@ jobs:
         DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         FACEPUNCH_UPLOAD_ENABLED: 'true'
       run: |
+        echo "DISCORD_WEBHOOK_URL is set: ${{ secrets.DISCORD_WEBHOOK_URL != '' }}"
+        echo "FACEPUNCH_UPLOAD_ENABLED is: $FACEPUNCH_UPLOAD_ENABLED"
         # Run parser with timeout to prevent infinite runs
-        timeout 3600 npm start scan || true
+        timeout 3600 npm start scan
         
     - name: Check for cache changes
       id: cache-changes
