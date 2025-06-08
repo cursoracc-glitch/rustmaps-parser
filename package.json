@@ -30,7 +30,7 @@
     "dotenv": "^16.5.0",
     "fs-extra": "^11.2.0",
     "p-limit": "^4.0.0",
-    "puppeteer": "^21.6.1",
+    "puppeteer": "^23.8.0",
     "sanitize-filename": "^1.6.3"
   },
   "devDependencies": {
