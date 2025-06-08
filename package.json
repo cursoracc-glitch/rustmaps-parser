@@ -1,0 +1,51 @@
+{
+  "name": "rustmaps-parser",
+  "version": "1.0.0",
+  "description": "High-performance TypeScript parser for rustmaps.ru with async downloads",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "clean": "rimraf dist downloads",
+    "lint": "eslint src/**/*.ts",
+    "format": "prettier --write src/**/*.ts"
+  },
+  "keywords": [
+    "rust",
+    "maps",
+    "parser",
+    "scraper",
+    "typescript",
+    "async"
+  ],
+  "author": "o3",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "chalk": "^5.3.0",
+    "cli-progress": "^3.12.0",
+    "commander": "^11.1.0",
+    "dayjs": "^1.11.10",
+    "dotenv": "^16.5.0",
+    "fs-extra": "^11.2.0",
+    "p-limit": "^4.0.0",
+    "puppeteer": "^21.6.1",
+    "sanitize-filename": "^1.6.3"
+  },
+  "devDependencies": {
+    "@types/cli-progress": "^3.11.6",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.17.57",
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
+    "@typescript-eslint/parser": "^6.13.2",
+    "eslint": "^8.55.0",
+    "prettier": "^3.1.0",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

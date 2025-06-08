@@ -1,0 +1,83 @@
+name: Parse RustMaps
+
+on:
+  schedule:
+    # Run every 6 hours
+    - cron: '0 */6 * * *'
+  workflow_dispatch: # Allow manual trigger
+  push:
+    branches: [ main ]
+    paths:
+      - 'src/**'
+      - 'package.json'
+      - '.github/workflows/parse-maps.yml'
+
+jobs:
+  parse-maps:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build project
+      run: npm run build
+      
+    - name: Install Chromium dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y \
+          libnss3 \
+          libatk-bridge2.0-0 \
+          libdrm2 \
+          libxkbcommon0 \
+          libxcomposite1 \
+          libxdamage1 \
+          libxrandr2 \
+          libgbm1 \
+          libxss1 \
+          libasound2
+          
+    - name: Parse maps and update cache
+      env:
+        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        FACEPUNCH_UPLOAD_ENABLED: 'true'
+      run: |
+        # Run parser with timeout to prevent infinite runs
+        timeout 3600 npm start scan || true
+        
+    - name: Check for cache changes
+      id: cache-changes
+      run: |
+        if git diff --quiet output/rustmaps-cache.json; then
+          echo "changed=false" >> $GITHUB_OUTPUT
+        else
+          echo "changed=true" >> $GITHUB_OUTPUT
+        fi
+        
+    - name: Commit and push cache updates
+      if: steps.cache-changes.outputs.changed == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add output/rustmaps-cache.json
+        git commit -m "🤖 Update rustmaps cache - $(date '+%Y-%m-%d %H:%M:%S')"
+        git push
+        
+    - name: Upload cache as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: rustmaps-cache
+        path: output/rustmaps-cache.json
+        retention-days: 30 
