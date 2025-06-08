@@ -7,7 +7,7 @@ concurrency:
 on:
   schedule:
     # Run every 6 hours
-    - cron: '0 */6 * * *'
+    - cron: '*/15 * * * *' # Run every 15 minutes
   workflow_dispatch: # Allow manual trigger
   push:
     branches: [ main ]
@@ -77,7 +77,7 @@ jobs:
         echo "DISCORD_WEBHOOK_URL is set: ${{ secrets.DISCORD_WEBHOOK_URL != '' }}"
         echo "FACEPUNCH_UPLOAD_ENABLED is: $FACEPUNCH_UPLOAD_ENABLED"
         # Run parser with timeout to prevent infinite runs
-        timeout 3600 npm start scan
+        timeout 600 npm start scan # Run for 10 minutes
         
     - name: Check for cache changes
       id: cache-changes
