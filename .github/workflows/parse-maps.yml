@@ -52,17 +52,17 @@ jobs:
     - name: Build project
       run: npm run build
 
-    #--- запуск парсера ровно 100 с -----------------------------------------
-    - name: Parse maps (stop at 100 s)
+    #--- запуск парсера ровно 600 с -----------------------------------------
+    - name: Parse maps (stop at 600 s)
       env:
         DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         FACEPUNCH_UPLOAD_ENABLED: 'true'
       run: |
         set +e                         # не завершаем job при exit 124
-        timeout 100 npm start scan
+        timeout 600 npm start scan
         code=$?
         if [ $code -eq 124 ]; then     # 124 → время вышло, это «успех»
-          echo "Parser stopped after 100 s as intended."
+          echo "Parser stopped after 600 s as intended."
           code=0
         fi
         exit $code
