@@ -6,7 +6,7 @@ concurrency:
 
 on:
   schedule:          # каждые 15 мин
-    - cron: '*/15 * * * *'
+    - cron: '0 8 * * *' 
   workflow_dispatch:
   push:
     branches: [ main ]
@@ -53,16 +53,16 @@ jobs:
       run: npm run build
 
     #--- запуск парсера ровно 600 с -----------------------------------------
-    - name: Parse maps (stop at 600 s)
+    - name: Parse maps (stop at 3600 s)
       env:
         DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         FACEPUNCH_UPLOAD_ENABLED: 'true'
       run: |
         set +e                         # не завершаем job при exit 124
-        timeout 600 npm start scan
+        timeout 3600 npm start scan
         code=$?
         if [ $code -eq 124 ]; then     # 124 → время вышло, это «успех»
-          echo "Parser stopped after 600 s as intended."
+          echo "Parser stopped after 3600 s as intended."
           code=0
         fi
         exit $code
