@@ -1386,9 +1386,11 @@
     "http://rustmaps.ru/upload/mapfiles/44525/79678//castom.map",
     "http://rustmaps.ru/upload/mapfiles/44524/79661//Cromulent0Rust011.map",
     "http://rustmaps.ru/upload/mapfiles/44467/79794//FarmZone_ZHKRUST.map",
-    "http://rustmaps.ru/upload/mapfiles/44235/80486//wipedotarustmax510_dc16ddbd00d24ddca65a49d3a8d77270.map"
+    "http://rustmaps.ru/upload/mapfiles/44235/80486//wipedotarustmax510_dc16ddbd00d24ddca65a49d3a8d77270.map",
+    "http://rustmaps.ru/upload/mapfiles/45379/80778//onegrid_3.3.map",
+    "http://rustmaps.ru/upload/mapfiles/44175/80707//CustomZHKRUST.map"
   ],
   "lastScanDate": "",
   "totalMapsFound": 0,
-  "totalFilesDownloaded": 1386
+  "totalFilesDownloaded": 1388
 }
