@@ -1388,9 +1388,13 @@
     "http://rustmaps.ru/upload/mapfiles/44467/79794//FarmZone_ZHKRUST.map",
     "http://rustmaps.ru/upload/mapfiles/44235/80486//wipedotarustmax510_dc16ddbd00d24ddca65a49d3a8d77270.map",
     "http://rustmaps.ru/upload/mapfiles/45379/80778//onegrid_3.3.map",
-    "http://rustmaps.ru/upload/mapfiles/44175/80707//CustomZHKRUST.map"
+    "http://rustmaps.ru/upload/mapfiles/44175/80707//CustomZHKRUST.map",
+    "http://rustmaps.ru/upload/mapfiles/45410/80782//test4.map",
+    "http://rustmaps.ru/upload/mapfiles/45406/80781//test3.map",
+    "http://rustmaps.ru/upload/mapfiles/45405/80780//test2.map",
+    "http://rustmaps.ru/upload/mapfiles/45404/80779//test.map"
   ],
   "lastScanDate": "",
   "totalMapsFound": 0,
-  "totalFilesDownloaded": 1388
+  "totalFilesDownloaded": 1392
 }
