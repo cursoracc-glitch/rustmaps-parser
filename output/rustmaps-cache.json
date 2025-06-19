@@ -1392,9 +1392,24 @@
     "http://rustmaps.ru/upload/mapfiles/45410/80782//test4.map",
     "http://rustmaps.ru/upload/mapfiles/45406/80781//test3.map",
     "http://rustmaps.ru/upload/mapfiles/45405/80780//test2.map",
-    "http://rustmaps.ru/upload/mapfiles/45404/80779//test.map"
+    "http://rustmaps.ru/upload/mapfiles/45404/80779//test.map",
+    "http://rustmaps.ru/upload/mapfiles/45465/80803//onegrid_5.3.map",
+    "http://rustmaps.ru/upload/mapfiles/45464/80802//onegrid_5.2.map",
+    "http://rustmaps.ru/upload/mapfiles/45463/80801//onegrid_5.0.map",
+    "http://rustmaps.ru/upload/mapfiles/45462/80800//onegrid_4.9.map",
+    "http://rustmaps.ru/upload/mapfiles/45461/80799//onegrid_4.7.map",
+    "http://rustmaps.ru/upload/mapfiles/45460/80798//onegrid_4.3.map",
+    "http://rustmaps.ru/upload/mapfiles/45443/80797//onegrid_4.1.map",
+    "http://rustmaps.ru/upload/mapfiles/45442/80795//onegrid_3.9.map",
+    "http://rustmaps.ru/upload/mapfiles/45441/80794//onegrid_3.8.map",
+    "http://rustmaps.ru/upload/mapfiles/45440/80793//onegrid_3.7.map",
+    "http://rustmaps.ru/upload/mapfiles/45438/80792//onegrid_3.7.map",
+    "http://rustmaps.ru/upload/mapfiles/45435/80796//onegrid_4.0.map",
+    "http://rustmaps.ru/upload/mapfiles/45434/80790//onegrid_3.5.map",
+    "http://rustmaps.ru/upload/mapfiles/45433/80789//onegrid_3.4.map",
+    "http://rustmaps.ru/upload/mapfiles/45412/80783//smallmap 1.map"
   ],
   "lastScanDate": "",
   "totalMapsFound": 0,
-  "totalFilesDownloaded": 1392
+  "totalFilesDownloaded": 1407
 }
