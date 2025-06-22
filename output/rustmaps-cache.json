@@ -1415,9 +1415,10 @@
     "http://rustmaps.ru/upload/mapfiles/45489/80806//onegrid_5.7.map",
     "http://rustmaps.ru/upload/mapfiles/45487/80805//onegrid_5.6.map",
     "http://rustmaps.ru/upload/mapfiles/45469/80804//onegrid_5.5.map",
-    "http://rustmaps.ru/upload/mapfiles/45510/80823//wos11.map"
+    "http://rustmaps.ru/upload/mapfiles/45510/80823//wos11.map",
+    "http://rustmaps.ru/upload/mapfiles/45510/80824//moqa11111111.map"
   ],
   "lastScanDate": "",
   "totalMapsFound": 0,
-  "totalFilesDownloaded": 1415
+  "totalFilesDownloaded": 1416
 }
