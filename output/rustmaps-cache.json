@@ -1426,9 +1426,12 @@
     "http://rustmaps.ru/upload/mapfiles/45578/80831//rtg.map",
     "http://rustmaps.ru/upload/mapfiles/45510/80837//ьщы щитщмф 01.map",
     "http://rustmaps.ru/upload/mapfiles/45510/80836//ed.map",
-    "http://rustmaps.ru/upload/mapfiles/45609/80839//krug.map"
+    "http://rustmaps.ru/upload/mapfiles/45609/80839//krug.map",
+    "http://rustmaps.ru/upload/mapfiles/45622/80842//test_build.map",
+    "http://rustmaps.ru/upload/mapfiles/45619/80841//2.4.map",
+    "http://rustmaps.ru/upload/mapfiles/45618/80840//2.4.map"
   ],
   "lastScanDate": "",
   "totalMapsFound": 0,
-  "totalFilesDownloaded": 1426
+  "totalFilesDownloaded": 1429
 }
