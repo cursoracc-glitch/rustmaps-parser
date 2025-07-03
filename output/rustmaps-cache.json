@@ -1430,9 +1430,10 @@
     "http://rustmaps.ru/upload/mapfiles/45622/80842//test_build.map",
     "http://rustmaps.ru/upload/mapfiles/45619/80841//2.4.map",
     "http://rustmaps.ru/upload/mapfiles/45618/80840//2.4.map",
-    "http://rustmaps.ru/upload/mapfiles/45640/80843//ploskost.map"
+    "http://rustmaps.ru/upload/mapfiles/45640/80843//ploskost.map",
+    "http://rustmaps.ru/upload/mapfiles/45659/80844//123123.map"
   ],
   "lastScanDate": "",
   "totalMapsFound": 0,
-  "totalFilesDownloaded": 1430
+  "totalFilesDownloaded": 1431
 }
