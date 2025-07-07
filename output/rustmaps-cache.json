@@ -1434,9 +1434,11 @@
     "http://rustmaps.ru/upload/mapfiles/45659/80844//123123.map",
     "http://rustmaps.ru/upload/mapfiles/45673/80846//untitled.map",
     "http://rustmaps.ru/upload/mapfiles/45666/80845//ZeenBuildMap.map",
-    "http://rustmaps.ru/upload/mapfiles/45682/80847//sss.map"
+    "http://rustmaps.ru/upload/mapfiles/45682/80847//sss.map",
+    "http://rustmaps.ru/upload/mapfiles/45693/80854//for_video.map",
+    "http://rustmaps.ru/upload/mapfiles/45691/80853//for_video.map"
   ],
   "lastScanDate": "",
   "totalMapsFound": 0,
-  "totalFilesDownloaded": 1434
+  "totalFilesDownloaded": 1436
 }
