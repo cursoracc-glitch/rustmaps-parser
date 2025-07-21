@@ -1442,9 +1442,10 @@
     "http://rustmaps.ru/upload/mapfiles/45725/80859//aerorust_map.map",
     "http://rustmaps.ru/upload/mapfiles/45720/80858//one_grid_island.map",
     "http://rustmaps.ru/upload/mapfiles/45725/80863//aerorust.map",
-    "http://rustmaps.ru/upload/mapfiles/45720/80865//Lone.map"
+    "http://rustmaps.ru/upload/mapfiles/45720/80865//Lone.map",
+    "http://rustmaps.ru/upload/mapfiles/45757/80866//Тестовый мир.map"
   ],
   "lastScanDate": "",
   "totalMapsFound": 0,
-  "totalFilesDownloaded": 1442
+  "totalFilesDownloaded": 1443
 }
