@@ -1444,9 +1444,10 @@
     "http://rustmaps.ru/upload/mapfiles/45725/80863//aerorust.map",
     "http://rustmaps.ru/upload/mapfiles/45720/80865//Lone.map",
     "http://rustmaps.ru/upload/mapfiles/45757/80866//Тестовый мир.map",
-    "http://rustmaps.ru/upload/mapfiles/45772/80867//CustomMap.map"
+    "http://rustmaps.ru/upload/mapfiles/45772/80867//CustomMap.map",
+    "http://rustmaps.ru/upload/mapfiles/45788/80868//untitled.map"
   ],
   "lastScanDate": "",
   "totalMapsFound": 0,
-  "totalFilesDownloaded": 1444
+  "totalFilesDownloaded": 1445
 }
